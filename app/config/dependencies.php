@@ -2,6 +2,10 @@
 // DIC configuration
 $container = $app->getContainer();
 
+//load dot env
+$dotenv = new Dotenv\Dotenv(__DIR__, '../../.env');
+$dotenv->load();
+
 //Override the default Not Found Handler
 $container['notFoundHandler'] = function ($c) {
   return function ($request, $response) use ($c) {
