@@ -3,14 +3,14 @@ worker1:
   type: php
   network_dirs:
     - queue
-  #exec: "bash daemon.sh"
+  #_exec: "bash daemon.sh"
 
 storage1:
   name: network_dirs
   type: nfs
 
 web1:
-  document_root: web
+  document_root: public
   php_version: 7.0
   php_extensions:
     - amqp
