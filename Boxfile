@@ -2,7 +2,7 @@ worker1:
   name: Jembuuud
   type: php
   network_dirs:
-    - queue
+    - logs
   #_exec: "bash daemon.sh"
 
 storage1:
